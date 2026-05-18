@@ -7,14 +7,14 @@ public class Livro {
     private String editora;
 
     //Construtor para leitura de dados
-    Livro(int idLivro, String nome, String autor, String editora){
+    public Livro(int idLivro, String nome, String autor, String editora){
         setIdLivro(idLivro);
         setNome(nome);
         setAutor(autor);
         setEditora(editora);
     }
     //Construtor para criação de dados
-    Livro(String nome, String autor, String editora){
+    public Livro(String nome, String autor, String editora){
         setNome(nome);
         setAutor(autor);
         setEditora(editora);
