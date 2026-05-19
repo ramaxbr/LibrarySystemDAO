@@ -2,13 +2,16 @@ package dao;
 
 import model.Livro;
 
+import java.util.List;
+import java.util.Optional;
+
 public interface ILivroDAO {
 
     public void cadastrarLivro(Livro livro);
 
-    public void listarLivro(Livro livro);
+    public List listarLivro();
 
-    public void buscarLivro(int idLivro);
+    public Optional<Livro> buscarLivro(int idLivro);
 
-    public void deletarLivro(Livro livro);
+    public void deletarLivro(int idLivro);
 }
