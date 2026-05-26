@@ -1,29 +1,29 @@
 package model;
 
-public class Aluno {
-    private int idAluno;
+public class Usuario {
+    private int idUsuario;
     private String nome;
     private String endereco;
     private String telefone;
 
     //Construtor para leitura de dados
-    public Aluno(int idAluno, String nome, String endereco, String telefone){
-        setIdAluno(idAluno);
+    public Usuario(int idUsuario, String nome, String endereco, String telefone){
+        setIdUsuario(idUsuario);
         setNome(nome);
         setEndereco(endereco);
         setTelefone(telefone);
     }
 
     //Construtor para criação de dados
-    public Aluno(String nome, String endereco, String telefone){
+    public Usuario(String nome, String endereco, String telefone){
         setNome(nome);
         setEndereco(endereco);
         setTelefone(telefone);
     }
 
     //Getters
-    public int getIdAluno() {
-        return idAluno;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
     public String getNome(){
@@ -39,8 +39,8 @@ public class Aluno {
     }
 
     //Setters
-    public void setIdAluno(int idAluno) {
-        this.idAluno = idAluno;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public void setNome(String nome){
@@ -57,6 +57,6 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return String.format("Id: %d\n Nome: %s\n Endereço: %s\n Telefone: %s\n", idAluno, nome, endereco, telefone );
+        return String.format("Id: %d\n Nome: %s\n Endereço: %s\n Telefone: %s\n", idUsuario, nome, endereco, telefone );
     }
 }

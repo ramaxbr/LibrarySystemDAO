@@ -3,12 +3,10 @@ package services;
 import daoimpl.LivroDAO;
 import model.Livro;
 
-import java.sql.Connection;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class BibliotecaServices {
+public class LivroServices {
     Scanner sc = new Scanner(System.in);
     public void menuLivros(){
 
@@ -50,11 +48,6 @@ public class BibliotecaServices {
         }while (rodarMenu);
     }
 
-    public void menuAlunos(){
-
-    }
-
-
     public void cadastrarLivro(){
         System.out.println("Digite o nome do livro:");
         String nomeLivro = sc.nextLine();
@@ -64,7 +57,6 @@ public class BibliotecaServices {
 
         System.out.println("Digite a editora do livro");
         String editoraLivro = sc.nextLine();
-
 
         LivroDAO cadastrarLivro = new LivroDAO();
 

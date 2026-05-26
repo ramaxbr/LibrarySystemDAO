@@ -1,9 +1,8 @@
 package org.example;
 
-import daoimpl.LivroDAO;
 import database.connectionFactory;
-import model.Livro;
-import services.BibliotecaServices;
+import services.UsuarioServices;
+import services.LivroServices;
 
 import java.util.Scanner;
 
@@ -11,7 +10,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        BibliotecaServices bibliotecaServices = new BibliotecaServices();
+        LivroServices livroServices = new LivroServices();
+        UsuarioServices usuarioServices = new UsuarioServices();
         connectionFactory.testConnection();
         Scanner sc = new Scanner(System.in);
 
@@ -22,7 +22,7 @@ public class App
             System.out.println("====Sistema da biblioteca====");
             System.out.println("Selecione uma das opções:");
             System.out.println("1- Menu Livros.");
-            System.out.println("2- Menu Usuários.");
+            System.out.println("2- Menu Usuario.");
             System.out.println("0- Sair.");
 
             opcao = sc.nextInt();
@@ -30,10 +30,10 @@ public class App
 
             switch (opcao){
                 case 1:
-                    bibliotecaServices.menuLivros();
+                    livroServices.menuLivros();
                     break;
                 case 2:
-                    bibliotecaServices.menuAlunos();
+                    usuarioServices.menuUsuario();
                     break;
                 case 0:
                     rodarMenu = false;

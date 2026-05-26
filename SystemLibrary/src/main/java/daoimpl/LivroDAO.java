@@ -102,6 +102,5 @@ public class LivroDAO implements ILivroDAO {
         }catch (SQLException errorSQL){
             throw new RuntimeException("Erro ao deletar o livro." + errorSQL);
         }
-
     }
 }
